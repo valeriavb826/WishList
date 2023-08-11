@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    min-height: 100vh;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    background-image: radial-gradient(ellipse at center, #6b9bd2, #213b6a);
+    /* background-image: radial-gradient(ellipse at top left, #6b9bd2, #042a6a); */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    margin: 0;
+    /* text-align: center; */
+    color: #e6ddf9;
+  }
+
+
+  /*** TOP HEADER ****/
+
+
+  .header {
+    /* padding: 2rem 10%; */
+    margin: 2rem 10%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ece1fa;
+  }
+  
+  .TopHeaderLogo {
+    font-size: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    color: #ece1fa;
+  }
+  
+  .TopHeaderButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #e6ddf9;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .TopHeaderButton:hover {
+    background-color: white;
+  }
+
+  
+    /*** BLOCK POST  ****/
+    .post {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: #e6ddf9;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      animation: animate-in 1s ease-out forwards;
+      resize: vertical;
+      height: 100%;
+      overflow-wrap: break-word;
+    }
+    
+    .author {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: #2a0f69;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    
+    .postText {
+      white-space: pre-line;
+      text-overflow:initial;
+      font-size: 1.25rem;
+      margin: 0.25rem 0 0 0;
+      color: #a89fb3;
+      font-style: italic;
+      height: 100%;
+      object-fit:cover;
+      overflow-wrap: break-word;
+    }
+    
+    @keyframes animate-in {
+      from {
+        opacity: 0;
+        transform: translateY(1rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+  
+    /*** POST BODY ****/
+  
+    .postBody {
+      list-style: none;
+      /* max-width: 50rem; */
+      margin: 1rem auto;
+      padding: 1rem 0;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 30%);
+      justify-content: center;
+      /* border: 3px solid white; */
+      /* height:100%; */
+    }
+  
+  
+    
+      /*** IMPUT BOX ****/
+  
+  .form {
+    background-color: #70849b;
+    padding: 1rem;
+    width: 20rem;
+    /* margin: 2rem auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .form label {
+    display: block;
+    margin-bottom: 0.05rem;
+    color: #eadbfb;
+    font-weight: bold;
+  }
+  
+  .form input,
+  .form textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #cfc9d8;
+    color: #28262c;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+  
+  .actions button {
+    cursor: pointer;
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a1e3e;
+    color: #e5d5f7;
+  }
+  
+  .actions button:hover {
+    background-color: #2d356e;
+  }
+  
+  .actions button[type='button'] {
+    background-color: transparent;
+  }
+  
+  .actions button[type='button']:hover {
+    color: #d1bee6;
+  }
+
+      /*** IMPUT BOX ****/
+  
+      .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      
+      .modal {
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        padding: 0;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+
